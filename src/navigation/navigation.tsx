@@ -19,6 +19,6 @@ export const routes: IRoute[] = [
     component: SettingsPage,
     linkText: 'Settings',
     path: '/settings',
-    to: '/settings',
-  },
+    to: '/settings'
+  }
 ];

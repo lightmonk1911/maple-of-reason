@@ -1,11 +1,12 @@
 {
   "editor.tabSize": 2,
-  "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "emmet.includeLanguages": {
     "postcss": "css"
   },
   "emmet.syntaxProfiles": {
     "postcss": "css"
-  }
+  },
+  "prettier.eslintIntegration": true,
+  "editor.formatOnSave": true
 }
