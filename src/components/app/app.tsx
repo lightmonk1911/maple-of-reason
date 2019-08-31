@@ -1,10 +1,10 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import { BrowserRouter, BrowserRouterProps } from 'react-router-dom';
 import { routes } from '../../navigation/navigation';
 import { NavBar } from '../navbar/index';
 import { PageRouter } from '../page-router/index';
 
-const App = (): ReactElement<BrowserRouterProps> => {
+const App: React.FunctionComponent<BrowserRouterProps> = () => {
   return (
     <BrowserRouter>
       <NavBar routes={routes} />

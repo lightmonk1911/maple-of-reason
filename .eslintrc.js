@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'prettier'
   ],
   globals: {
     Atomics: 'readonly',
@@ -19,7 +20,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: ['react', 'prettier'],
   rules: {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
@@ -28,7 +29,7 @@ module.exports = {
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
   },
   settings: {
     react: {
