@@ -34,7 +34,7 @@ describe('should change routes', (): void => {
       throw new Error('nav Element is null');
     }
     expect(navElement).toBeInstanceOf(HTMLElement);
-    expect(navElement.querySelectorAll('a')).toHaveLength(3);
+    expect(navElement.querySelectorAll('a')).toHaveLength(4);
     let link = navElement.querySelectorAll('a')[1];
     expect(link).not.toBeFalsy();
     expect(link).toBeInstanceOf(HTMLAnchorElement);
@@ -44,7 +44,10 @@ describe('should change routes', (): void => {
       linkNotNull.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
 
-    expect(((navElement.parentElement as HTMLElement).lastChild as HTMLElement).textContent).toBe('Tree');
+    expect(
+      ((navElement.parentElement as HTMLElement).lastChild as HTMLElement)
+        .textContent
+    ).toBe('Tree');
 
     link = navElement.querySelectorAll('a')[2];
     expect(link).not.toBeFalsy();
@@ -55,6 +58,9 @@ describe('should change routes', (): void => {
       linkNotNull.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
 
-    expect(((navElement.parentElement as HTMLElement).lastChild as HTMLElement).textContent).toBe('Settings');
+    expect(
+      ((navElement.parentElement as HTMLElement).lastChild as HTMLElement)
+        .textContent
+    ).toBe('Settings');
   });
 });
