@@ -18,5 +18,5 @@ export const NavBar: React.FunctionComponent<INavigationProps> = (
       </React.Fragment>
     )
   );
-  return <nav className={b}>{links}</nav>;
+  return <nav className={b()}>{links}</nav>;
 };
