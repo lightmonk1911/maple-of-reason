@@ -22,14 +22,13 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
-    'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     '@typescript-eslint/interface-name-prefix': ['warn', 'always'],
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'react/prop-types': 'off',
+    'react/prop-types': 'off'
   },
   settings: {
     react: {
