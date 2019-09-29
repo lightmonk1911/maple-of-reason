@@ -52,7 +52,7 @@ describe('should change routes', (): void => {
     if (!settingsPageContent)
       throw new Error('pageContent is falsy! pageContent:' + nav);
     expect(
-      settingsPageContent.classList.contains('settings-page-content')
+      settingsPageContent.classList.contains('settings-page__page-content')
     ).toBe(true);
   });
 
@@ -68,7 +68,7 @@ describe('should change routes', (): void => {
     if (!timelinePageContent)
       throw new Error('pageContent is falsy! pageContent:' + nav);
     expect(
-      timelinePageContent.classList.contains('timeline-page-content')
+      timelinePageContent.classList.contains('timeline-page__page-content')
     ).toBe(true);
   });
 
@@ -103,7 +103,7 @@ describe('should change routes', (): void => {
       if (!settingsPageContent)
         throw new Error('pageContent is falsy! pageContent:' + nav);
       expect(
-        settingsPageContent.classList.contains('settings-page-content')
+        settingsPageContent.classList.contains('settings-page__page-content')
       ).toBe(true);
     });
   });

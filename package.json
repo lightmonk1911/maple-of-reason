@@ -4,6 +4,7 @@
   "description": "task tree creator",
   "main": "index.js",
   "dependencies": {
+    "bem-cn": "^3.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1"
