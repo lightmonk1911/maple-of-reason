@@ -1,7 +1,7 @@
 import { act } from 'react-dom/test-utils';
 import ReactDOM from 'react-dom';
 import React from 'react';
-import App from './app';
+import App from './app.component';
 const a = 21;
 
 describe('tests works with ts', (): void => {

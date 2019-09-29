@@ -1,1 +1,1 @@
-export { ToDoPage } from './todo-page';
+export { ToDoPage } from './todo-page.component';

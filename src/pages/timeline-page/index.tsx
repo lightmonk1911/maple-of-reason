@@ -1,1 +1,1 @@
-export { TimelinePage } from './timeline-page';
+export { TimelinePage } from './timeline-page.component';

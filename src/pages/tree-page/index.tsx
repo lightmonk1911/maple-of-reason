@@ -1,1 +1,1 @@
-export { TreePage } from './tree-page';
+export { TreePage } from './tree-page.component';

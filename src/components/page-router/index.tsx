@@ -1,1 +1,1 @@
-export { PageRouter } from './page-router';
+export { PageRouter } from './page-router.component';
