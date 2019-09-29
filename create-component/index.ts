@@ -48,9 +48,10 @@ describe('should render with bem', (): void => {
   });
 
   test('should have mixed class', () => {
-    const element = container && container.querySelector('*');
-    console.log('element', element && element.classList);
+    const element = container && container.querySelector('.${kebabName}');
     expect(element).toBeInstanceOf(Element);
+    if (!element) return;
+    expect(element.classList.contains('mix'));
   });
 });
 `;
