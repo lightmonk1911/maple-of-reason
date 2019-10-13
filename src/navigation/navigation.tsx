@@ -1,8 +1,8 @@
 import { RouteProps } from 'react-router';
-import { SettingsPage } from '../pages/settings-page/index';
-import { ToDoPage } from '../pages/todo-page/index';
-import { TreePage } from '../pages/tree-page/index';
-import { TimelinePage } from '../pages/timeline-page/index';
+import { ToDoPage } from '../pages/todo-page/todo-page.component';
+import { TreePage } from '../pages/tree-page/tree-page.component';
+import { SettingsPage } from '../pages/settings-page/settings-page.component';
+import { TimelinePage } from '../pages/timeline-page/timeline-page.component';
 
 export interface IRoute extends RouteProps {
   linkText: string;

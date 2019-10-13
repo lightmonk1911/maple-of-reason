@@ -19,8 +19,6 @@ export const ${componentName}: React.FunctionComponent<I${componentName}Props> =
   );
 };
 `;
-const indexContent = `export { ${componentName} } from './${kebabName}.component';
-`;
 const stylesContent = `.${kebabName} {
   display: flex;
 }`;
@@ -64,10 +62,6 @@ fs.writeFileSync(
 fs.writeFileSync(
   `src/components/${kebabName}/${kebabName}.component.tsx`,
   componentContent
-);
-fs.writeFileSync(
-  `src/components/${kebabName}/${kebabName}.index.ts`,
-  indexContent
 );
 fs.writeFileSync(
   `src/components/${kebabName}/${kebabName}.styles.pcss`,
