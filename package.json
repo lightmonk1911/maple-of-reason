@@ -5,17 +5,22 @@
   "main": "index.js",
   "dependencies": {
     "bem-cn": "^3.0.1",
+    "concurrently": "^5.0.0",
+    "express": "^4.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router": "^5.0.1"
+    "react-router": "^5.0.1",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
+    "@types/express": "^4.17.1",
     "@types/jest": "^24.0.15",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@types/react-router": "^5.0.3",
     "@types/react-router-dom": "^4.3.4",
     "@types/readline-sync": "^1.4.3",
+    "@types/uuid": "^3.4.5",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.12.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -45,7 +50,11 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
+    "start-frontend": "webpack-dev-server --config webpack.dev.js",
+    "start-server-compiler": "tsc ./src/backend/index.ts --esModuleInterop -w --outDir ./src/backend/dist",
+    "start-live-server": "nodemon ./src/backend/dist/index.js",
+    "start-backend": "concurrently \"npm run start-server-compiler\" \"npm run start-live-server\"",
     "build": "webpack --config webpack.prod.js"
   },
   "repository": {

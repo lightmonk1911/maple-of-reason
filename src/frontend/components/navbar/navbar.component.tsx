@@ -1,6 +1,6 @@
 import React from 'react';
 import { INavBarProps } from './navbar.types';
-import block from '../../../node_modules/bem-cn/lib/index';
+import block from '../../../../node_modules/bem-cn/lib/index';
 import { Link } from 'react-router-dom';
 
 const b = block('navbar');
