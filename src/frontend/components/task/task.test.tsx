@@ -2,7 +2,6 @@ import { act } from 'react-dom/test-utils';
 import ReactDOM from 'react-dom';
 import React from 'react';
 import { Task } from './task.component';
-import { tasks } from '../../../backend/tasks';
 
 describe('should render with bem', (): void => {
   let container: HTMLElement | null;
@@ -11,7 +10,10 @@ describe('should render with bem', (): void => {
     document.body.appendChild(container);
 
     act((): void => {
-      ReactDOM.render(<Task {...tasks[0]} className="mix" />, container);
+      ReactDOM.render(
+        <Task {...{ id: '1', key: 'key', name: 'test' }} className="mix" />,
+        container
+      );
     });
   });
 

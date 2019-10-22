@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        @keyframes example {
+            0%   {transform: translate(0, 0)}
+            15%   {transform: translate(0, 0)}
+            35%  {transform: translate(0, -15px)}
+            100% {transform: translate(0, 0)}
+        }
+        .first {
+            animation: example 1s;
+            animation-iteration-count: infinite;
+        }
+        .second {
+            animation: example 1s;
+            animation-delay: 0.2s;
+            animation-iteration-count: infinite;
+        }
+        .third {
+            animation: example 1s;
+            animation-delay: 0.3s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+    <circle class="first" cx="10" cy="50" fill="red" r="10"/>
+    <circle class="second" cx="60" cy="50" fill="red" r="10"/>
+    <circle class="third" cx="110" cy="50" fill="red" r="10"/>
+</svg>
