@@ -57,7 +57,15 @@
     "start-live-server": "nodemon ./src/backend/dist/index.js",
     "start-backend": "concurrently \"npm run start-server-compiler\" \"npm run start-live-server\"",
     "build": "webpack --config webpack.prod.js",
-    "lint": "tsc --noEmit"
+    "lint:css": "stylelint src/**/*.{css,pcss}",
+    "lint:ts": "eslint src/**/*.{ts,tsx}",
+    "lint:format": "prettier --check src/**/*.{ts,tsx,css,pcss}",
+    "check:types": "tsc --noEmit",
+    "fix:css": "stylelint src/**/*.{css,pcss} --fix",
+    "fix:ts": "eslint src/**/*.{ts,tsx} --fix",
+    "fix:format": "prettier --check src/**/*.{ts,tsx,css,pcss} --write",
+    "lint": "yarn check:types && yarn lint:ts && yarn lint:css && yarn lint:format",
+    "fix": "yarn fix:ts && yarn fix:css && yarn fix:format"
   },
   "repository": {
     "type": "git",
@@ -85,7 +93,7 @@
       "prettier --write",
       "git add"
     ],
-    "*.{css, pcss}": [
+    "*.{css,pcss}": [
       "stylelint --fix",
       "prettier --write",
       "git add"
