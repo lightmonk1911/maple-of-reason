@@ -20,12 +20,12 @@ export const routes: IRoute[] = [
     component: SettingsPage,
     linkText: 'Settings',
     path: '/settings',
-    to: '/settings'
+    to: '/settings',
   },
   {
     component: TimelinePage,
     to: '/timeline',
     path: '/timeline',
-    linkText: 'Timeline'
-  }
+    linkText: 'Timeline',
+  },
 ];

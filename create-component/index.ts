@@ -57,17 +57,17 @@ describe('should render with bem', (): void => {
 fs.mkdirSync(`src/components/${kebabName}`);
 fs.writeFileSync(
   `src/components/${kebabName}/${kebabName}.types.tsx`,
-  typesContent
+  typesContent,
 );
 fs.writeFileSync(
   `src/components/${kebabName}/${kebabName}.component.tsx`,
-  componentContent
+  componentContent,
 );
 fs.writeFileSync(
   `src/components/${kebabName}/${kebabName}.styles.pcss`,
-  stylesContent
+  stylesContent,
 );
 fs.writeFileSync(
   `src/components/${kebabName}/${kebabName}.test.tsx`,
-  testContent
+  testContent,
 );

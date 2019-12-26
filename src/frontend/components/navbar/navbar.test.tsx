@@ -15,14 +15,14 @@ const routes = [
     component: SettingsPage,
     linkText: 'Settings',
     path: '/settings',
-    to: '/settings'
+    to: '/settings',
   },
   {
     component: TimelinePage,
     to: '/timeline',
     path: '/timeline',
-    linkText: 'Timeline'
-  }
+    linkText: 'Timeline',
+  },
 ];
 
 describe('should render with bem', (): void => {
@@ -36,7 +36,7 @@ describe('should render with bem', (): void => {
         <BrowserRouter>
           <NavBar routes={routes} />
         </BrowserRouter>,
-        container
+        container,
       );
     });
   });

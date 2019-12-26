@@ -82,10 +82,12 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
+      "prettier --write",
       "git add"
     ],
     "*.{css, pcss}": [
       "stylelint --fix",
+      "prettier --write",
       "git add"
     ]
   }

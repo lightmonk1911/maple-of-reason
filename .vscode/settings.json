@@ -6,7 +6,6 @@
   "emmet.syntaxProfiles": {
     "postcss": "css"
   },
-  "editor.formatOnSave": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",

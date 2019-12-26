@@ -38,7 +38,7 @@ describe('should change routes', (): void => {
 
   test('can navigate to settings page', (): void => {
     expect(
-      container && container.lastChild && container.lastChild.textContent
+      container && container.lastChild && container.lastChild.textContent,
     ).toBe('Todo page content');
 
     const settingsLink = navLinks[2];
@@ -52,7 +52,7 @@ describe('should change routes', (): void => {
     if (!settingsPageContent)
       throw new Error('pageContent is falsy! pageContent:' + nav);
     expect(
-      settingsPageContent.classList.contains('settings-page__page-content')
+      settingsPageContent.classList.contains('settings-page__page-content'),
     ).toBe(true);
   });
 
@@ -68,7 +68,7 @@ describe('should change routes', (): void => {
     if (!timelinePageContent)
       throw new Error('pageContent is falsy! pageContent:' + nav);
     expect(
-      timelinePageContent.classList.contains('timeline-page__page-content')
+      timelinePageContent.classList.contains('timeline-page__page-content'),
     ).toBe(true);
   });
 
@@ -87,23 +87,23 @@ describe('should change routes', (): void => {
 
     test('should be correctly initialized', () => {
       expect(
-        container && container.lastChild && container.lastChild.textContent
+        container && container.lastChild && container.lastChild.textContent,
       ).toBe('Timeline page content');
     });
 
     test('should navigate to setting', () => {
       const settingsLink = navLinks[2];
       expect(settingsLink.textContent).toBe('Settings');
-  
+
       act(() => {
         settingsLink.dispatchEvent(new MouseEvent('click', { bubbles: true }));
       });
-  
+
       const settingsPageContent = document.querySelector('.page-content');
       if (!settingsPageContent)
         throw new Error('pageContent is falsy! pageContent:' + nav);
       expect(
-        settingsPageContent.classList.contains('settings-page__page-content')
+        settingsPageContent.classList.contains('settings-page__page-content'),
       ).toBe(true);
     });
   });
