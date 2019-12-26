@@ -76,7 +76,8 @@
   "homepage": "https://github.com/lightmonk1911/maple-of-reason-frontend#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": ["npm test"]
     }
   },
   "lint-staged": {
