@@ -1,6 +1,5 @@
 {
   "editor.tabSize": 2,
-  "prettier.stylelintIntegration": true,
   "emmet.includeLanguages": {
     "postcss": "css"
   },
@@ -14,6 +13,5 @@
     "typescript",
     "typescriptreact"
   ],
-  "eslint.alwaysShowStatus": true,
-  "prettier.eslintIntegration": true
+  "eslint.alwaysShowStatus": true
 }
