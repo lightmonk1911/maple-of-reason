@@ -7,9 +7,11 @@
     "bem-cn": "^3.0.1",
     "concurrently": "^5.0.2",
     "express": "^4.17.1",
+    "nodemon": "^2.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router": "^5.1.2",
+    "ts-node": "^8.5.4",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
@@ -53,9 +55,7 @@
     "test": "jest",
     "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
     "start-frontend": "webpack-dev-server --config webpack.dev.js",
-    "start-server-compiler": "tsc ./src/backend/index.ts --esModuleInterop -w --outDir ./src/backend/dist",
-    "start-live-server": "nodemon ./src/backend/dist/index.js",
-    "start-backend": "concurrently \"npm run start-server-compiler\" \"npm run start-live-server\"",
+    "start-backend": "nodemon --exec ts-node ./src/backend/index.ts",
     "build": "webpack --config webpack.prod.js",
     "lint:css": "stylelint src/**/*.{css,pcss}",
     "lint:ts": "eslint src/**/*.{ts,tsx}",
