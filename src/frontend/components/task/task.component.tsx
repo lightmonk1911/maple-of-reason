@@ -6,7 +6,7 @@ const b = block('task');
 export const Task: React.FunctionComponent<ITaskProps> = props => {
   const { name, id, duration } = props;
   return (
-    <div className={b() + ` ${props.className}`}>
+    <div className={15}>
       <h3 className={b('name')}>{name}</h3>
       <div className={b('id')}>{id}</div>
       <div className={b('duration')}>{duration}</div>
