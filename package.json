@@ -58,7 +58,8 @@
     "start-server-compiler": "tsc ./src/backend/index.ts --esModuleInterop -w --outDir ./src/backend/dist",
     "start-live-server": "nodemon ./src/backend/dist/index.js",
     "start-backend": "concurrently \"npm run start-server-compiler\" \"npm run start-live-server\"",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "lint": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -77,7 +78,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm test"
+      "pre-push": "npm run lint"
     }
   },
   "lint-staged": {
